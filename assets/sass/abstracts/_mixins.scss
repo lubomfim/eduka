@@ -1,0 +1,8 @@
+@mixin media-phone {
+  @media (max-width: 425px) { @content; }
+}
+
+@mixin media-uptablet {
+  @media (max-width: 768px) { @content; }
+}
+

@@ -1,0 +1,39 @@
+body {
+  font-family: $font-fam-inter;
+  color: $color-black;
+}
+
+h1,
+h2 {
+  font-family: $font-fam-calistoga;
+}
+
+.container {
+  max-width: 1240px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+::before {
+  left: -135px;
+  bottom: -8px;
+  position: absolute;
+  color: $color-white;
+  padding: 10px 40px;
+  font-size: 3rem;
+  border-radius: 2em;
+
+  @include media-uptablet {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 90px;
+  }
+}
+
+::placeholder {
+  font-family: $font-fam-calistoga;
+  font-size: 2rem;
+  color: $color-green;
+  line-height: 2.6rem;
+}

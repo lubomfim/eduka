@@ -1,0 +1,40 @@
+.footer {
+  background-color: $color-grey;
+
+  &__wrapper {
+    padding: 56px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .social {
+    &__item {
+      margin-bottom: 39px;
+      padding-bottom: 4px;
+    
+      &:nth-child(3) {
+        margin-bottom: 0px;
+      }
+    }
+    
+    &__link {
+      font-weight: bold;
+      font-size: $font-small;
+      color: $color-black;
+      border-bottom: 3px solid $color-black;
+    }
+  }
+
+  @include media-phone {
+    &__wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    &__log {
+      margin-bottom: 100px;
+    }
+  }
+}
+

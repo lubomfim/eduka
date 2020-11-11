@@ -1,0 +1,53 @@
+.header {
+  margin-top: 48px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo-img {
+    width: 158px;
+  }
+
+  .nav {
+    &__ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__items {
+      margin-left: 50px;
+
+      &-a {
+        font-size: $font-smaller;
+        color: $color-black;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .get-in-touch__link {
+    padding: 13px 32px;
+    font-weight: 600;
+  }
+
+  @include media-uptablet {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__nav {
+      margin: 50px 0;
+      width: 100%;
+    }
+
+    .nav__ul {
+      justify-content: center;
+    }
+  }
+}

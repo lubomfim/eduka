@@ -1,0 +1,98 @@
+.testimonials {
+  background-color: $color-grey;
+
+  &__wrapper {
+    padding: 129px 0;
+  }
+
+  &__title {
+    padding-bottom: 140px;
+    text-align: center;
+
+    &-h2 {
+      display: inline-block;
+      font-family: $font-fam-calistoga;
+      font-size: $font-big;
+      position: relative;
+      z-index: 3;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        bottom: 8px;
+        left: 0px;
+        height: 6px;
+        background-color: $color-blue;
+        border-radius: 10px;
+        transform: rotate(-1.49deg);
+        z-index: -1;
+      }
+    }
+  }
+  
+  &__three-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-uptablet {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+  &__itens {
+    padding: 78px 27px 40px;
+    border-radius: 10px;
+    position: relative;
+    width: calc((100% / 3) - 25px);
+    color: $color-white;
+    text-align: center;
+    font-size: $font-smaller;
+
+    @include media-uptablet {
+      width: 100%;
+      margin-bottom: 100px;
+  }
+  
+
+    &-1 {
+      background-color: $color-blue;
+    }
+
+    &-2 {
+      background-color: $color-green;
+    }
+
+    &-3 {
+      background-color: $color-purble;
+    }
+  }
+
+  &__avatar {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__p {
+    font-weight: 200;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  @include media-phone {
+    &__wrapper {
+      padding: 50px 0;
+    }
+
+    &__item-3 {
+      margin-bottom: 0px;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.message {
+  margin: 146px 0 171px;
+
+  &__wrapper {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  &__title {
+    width: 50%;
+
+    &-h2 {
+      font-size: $font-bigger;
+      margin-bottom: 36px;
+    }
+
+    &-span {
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+        width: 100%;
+        height: 6px;
+        border-radius: 10px;
+        background-color: $color-green;
+        transform: rotate(-1.49deg);
+        z-index: -1;
+      }
+    }
+
+    &-p {
+      font-size: $font-smaller;
+      width: 65%;
+    }
+
+  }
+
+  &__form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-light-green;
+    padding: 37px 37px 69px;
+    border-radius: 20px;
+    position: relative;
+
+    .form__item {
+      margin-bottom: 23px;
+      padding: 12px 23px;
+      border: 1px solid #3fb1b5;
+      border-radius: 5px;
+      font-family: $font-fam-calistoga;
+      font-size: 2rem;
+      color: $color-green;
+      line-height: 2.6rem;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    padding: 13px 65px;
+    bottom: -26px;
+    right: 40px;
+    cursor: pointer;
+  }
+
+  @include media-phone {
+    margin: 50px 0 100px;
+    
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    &__title {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  
+    &__form {
+      width: 100%;
+    }
+  }
+}
