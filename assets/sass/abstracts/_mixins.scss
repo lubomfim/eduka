@@ -6,3 +6,24 @@
   @media (max-width: 768px) { @content; }
 }
 
+@mixin desktop {
+  @media (max-width: 900px) { @content; }
+}
+
+
+
+@mixin before {
+    left: -135px;
+    bottom: -8px;
+    position: absolute;
+    color: $color-white;
+    padding: 10px 40px;
+    font-size: 3rem;
+    border-radius: 2em;
+
+    @include media-uptablet {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 90px;
+    }
+}

@@ -19,16 +19,17 @@
 
     &__items {
       margin-left: 50px;
-
-      &-a {
-        font-size: $font-smaller;
-        color: $color-black;
-      }
-
+      
       &:first-child {
         margin-left: 0;
       }
     }
+
+    &__link {
+      font-size: $font-smaller;
+      color: $color-black;
+    }
+
   }
 
   .get-in-touch__link {

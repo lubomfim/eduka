@@ -6,17 +6,17 @@
 
   }
 
-  &__title {
+  &__text {
     width: 45%;
+  }
 
-    &-h1 {
-      font-size: $font-bigger;
-      margin-bottom: 35px;
-    }
+  &__title {
+    font-size: $font-bigger;
+    margin-bottom: 35px;
 
     &-span {
       position: relative;
-
+  
       &:after {
         content: " ";
         position: absolute;
@@ -29,7 +29,7 @@
         z-index: -1;
         transform: rotate(-1.49deg);
       }
-    }
+  }
   }
 
   &__illustration {
@@ -45,27 +45,33 @@
     font-weight: 600;
   }
 
+  @include desktop {
+    &__text {
+      margin-top: 60px;
+    }
+  }
+
   @include media-uptablet {
     &__wrapper {
       margin-top: 10px;
       flex-direction: column-reverse;
     }
     
-    &__title {
+    &__text {
       width: 90%;
       text-align: center;
+
     }
 
   }
 
   @include media-phone {
-
-    &__title-h1 {
+    &__title {
       font-size: 5rem;
-    }
-    
-    &__title-span::after {
-      bottom: 10px;
+
+      &-span::after {
+        bottom: 10px;
+      }
     }
     
     &__illustration {
